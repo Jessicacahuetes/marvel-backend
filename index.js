@@ -10,8 +10,6 @@ app.use(cors());
 const charactersRouter = require("./routes/characters");
 const comicsRouter = require("./routes/comics");
 
-// console.log("Clé API Marvel :", process.env.API_KEY);
-
 app.get("/", (req, res) => {
   try {
     return res.status(200).json("Welcome to the Marvel Multiverse");
@@ -30,5 +28,5 @@ app.all("*", (req, res) => {
 });
 
 app.listen(process.env.PORT || PORT, () => {
-  console.log("Server started 🦸🏻‍♂️ "); // Quand je vais lancer ce serveur, la callback va être appelée
+  console.log("Server started 🦸🏻‍♂️ "); //
 });
